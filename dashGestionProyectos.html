@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img id = "logo" src="images/logo.png" style="width: 100px; height: 100px;">
+        </div>
+        
+        
+        <div class="search-container">
+            <input type="text" placeholder="Buscar...">
+        </div>
+
+        <div class="user-menu">
+            <span class="username">Juan Pérez</span>
+            <img src="images/avatar-de-hombre.png" alt="Foto de perfil" class="profile-pic">
+            <img src="images/boton-de-notificaciones.png" alt="Icono de notificaciones" class="notifications-icon">
+        </div>
+
+    </header>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" hidden>
+
+
+    <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+        &#9776
+    </label>
+
+    <aside class="sidebar">
+        <label for="menu-toggle" class="close-menu">✘</label>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Estadísticas</a></li>
+                <li><a href="#">Configuración</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <section class="task-progress">
+            <h2>Progreso de Tareas</h2>
+            <div class="task-grid">
+                <div class="task-card">Tarea 1 - En progreso</div>
+                <div class="task-card">Tarea 2 - Completada</div>
+                <div class="task-card">Tarea 3 - Pendiente</div>
+                <div class="task-card">Tarea 4 - En progreso</div>
+            </div>
+        </section>
+
+        <section class="statistics">
+            <h2>Estadísticas Generales</h2>
+            <div class="stats-grid">
+                <div class="stat-card">Gráfica 1</div>
+                <div class="stat-card">Gráfica 2</div>
+                <div class="stat-card">Gráfica 3</div>
+            </div>
+        </section>
+
+        <section class="communication-feed">
+            <h2>Feed de Comunicación</h2>
+            <ul>
+                <li><strong>Juan Pérez:</strong> Nuevo comentario en el proyecto "Rediseño Web".</li>
+                <li><strong>Ana Gómez:</strong> La tarea "Revisar bases de datos" está completada.</li>
+                <li><strong>Pedro Sánchez:</strong> Nueva actualización en la configuración del servidor.</li>
+                <li><strong>María López:</strong> Se ha subido un nuevo archivo a "Documentos".</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul>
+            <li><a href="#">Ayuda</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
