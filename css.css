@@ -1,256 +1,339 @@
+/* Estilos generales del body */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    display: flex; 
+    flex-direction: column; /* Organizamos en columnas */
+    min-height: 100vh; 
     background-color: #f9f9f9;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    display: flex; /* Usamos flexbox para organizar elementos */
+    justify-content: space-between; /* Dejamos espacio entre los elementos */
+    align-items: center; 
+    padding: 10px 20px; 
+    background-color: #7a78ff; 
+    color: white; 
 }
 
+/* Estilos para el campo de búsqueda */
 .header .search-container input {
-    padding: 5px;
-    width: 50%;
-    max-width: 400px;
-    border-radius: 4px;
+    padding: 20px; 
+    width: 100%; 
+    max-width: 600px; 
+    border-radius: 10px; 
     border: 1px solid #ccc;
 }
 
+/* Estilos para el menú de usuario */
 .header .user-menu {
-    display: flex;
-    align-items: center;
+    display: flex; /* Usamos flexbox */
+    align-items: center; /* Alineamos verticalmente los elementos */
 }
 
+/* Estilos para la imagen del perfil */
 .header .user-menu img.profile-pic {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
 }
 
+/* Estilos para el ícono de notificaciones */
 .header .user-menu .notifications-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
+    width: 20px; 
+    height: 20px; 
+    margin-left: 10px; 
 }
 
+/* Estilos para el menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: -300px; 
+}
+
+.dropbtn {
+    background-color: #7a78ff; 
+    color: white; 
+    border: none;
+    padding: 10px; 
+    font-size: 16px;
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+
+.dropbtn:hover {
+    background-color: #5e5df0; 
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute; 
+    background-color: #f5f5f5; 
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px; 
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none; 
+    display: block; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; 
+}
+
+/* Mostrarmos contenido del menú al hacer hover sobre el dropdown */
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #5e5df0; 
+}
+
+/* Estilos de barra lateral */
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 0; 
     left: -250px; 
     bottom: 0;
-    width: 250px;
-    background-color: #f5f5f5;
-    padding-top: 20px;
-    display: flex;
+    width: 250px; 
+    background-color: #f5f5f5; 
+    padding-top: 20px; 
+    display: flex; 
     flex-direction: column;
-    align-items: center;
-    transition: left 0.3s ease;
+    align-items: center; 
+    transition: left 0.3s ease; 
 }
 
+/* Estilos checkbox menú */
+#menu-toggle {
+    position: absolute;
+    opacity: 0; 
+    pointer-events: none; 
+}
+
+/* Mostramos la barra lateral cuando el checkbox esté marcado */
 #menu-toggle:checked + .menu-toggle + .sidebar {
-    left: 0;
+    left: 0; 
 }
 
+/* Ocultamos toggle del menú */
 .sidebar .menu-toggle {
-    display: none;
+    display: none; /* No lo mostramos */
 }
 
 .sidebar .close-menu {
-    font-size: 30px;
+    font-size: 30px; 
     cursor: pointer;
-    position: absolute;
+    position: absolute; 
     top: 20px;
-    right: 20px;
-    color: #333;
+    right: 20px; 
+    color: #333; 
 }
 
 .nav ul {
-    list-style: none;
+    list-style: none; 
     padding: 0;
     margin: 0;
 }
 
 .nav ul li {
-    width: 100%;
+    width: 100%; 
 }
 
 .nav ul li a {
     display: block;
-    padding: 15px;
-    text-decoration: none;
+    padding: 15px; 
+    text-decoration: none; 
     color: #333;
     text-align: center;
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #ddd; 
+    transition: background-color 0.3s ease; 
+    border-radius: 10px; 
 }
 
+/* Estilamos los hover de los enlaces */
 .nav ul li a:hover {
     background-color: #ddd; 
 }
 
+
 .nav ul li a.active {
-    background-color: #4CAF50;
+    background-color: #7a78ff;
     color: white;
 }
+
 
 .main-content {
     margin-left: 270px;
     padding: 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    flex: 1; 
+    display: flex; /*Utilizamos flexbox para organizar el contenido */
+    flex-direction: column; /* Organizamos verticalmente */
 }
+
 
 .task-progress, .statistics, .communication-feed {
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
-/* Progreso de tareas */
 .task-grid {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
+    display: grid; /* Usamos grid */
+    gap: 20px; 
+    grid-template-columns: repeat(4, 1fr); /* Utilizamos repeat para conseguir cuatro columnas de tamaño igual */
 }
 
+/* Estilos para las tarjetas de tarea */
 .task-card {
-    background-color: #e0e0e0;
-    padding: 20px;
-    border-radius: 8px;
+    background-color: #e0e0e0; 
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; 
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Efecto de transformación */
 }
+
 
 .task-card:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
+
 .stats-grid {
-    display: grid;
-    gap: 20px;
+    display: grid; 
+    gap: 20px; 
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+
 .stat-card {
     background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 20px; 
+    border-radius: 8px; 
     text-align: center;
+    min-height: 200px;
 }
 
+
 .communication-feed ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
 }
 
 .communication-feed ul li {
-    background-color: #e0e0e0;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
+    background-color: #e0e0e0; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    border-radius: 8px; 
 }
 
 .footer {
-    padding: 20px;
+    padding: 20px; 
     background-color: #f5f5f5;
     text-align: center;
 }
 
+
 .footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
 }
 
 .footer ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* Espaciamos entre los elementos */
 }
 
 .footer ul li a {
-    text-decoration: none;
+    text-decoration: none; /* Eliminamos el subrayado */
     color: #333;
 }
 
+
 .footer ul li a:hover {
-    color: #4CAF50;
+    color: #4CAF50; 
 }
 
-@media (max-width: 1024px) {
-    .task-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .stats-grid {
-        grid-template-columns: 1fr 1fr 1fr;
+@media (min-width: 768px) {
+    .search-container .lupa-icon {
+        display: none; 
     }
-
-    .sidebar {
-        width: 200px;
-    }
-
-    .main-content {
-        margin-left: 220px;
+    .search-container input[type="text"] {
+        display: block; 
     }
 }
+
 
 @media (max-width: 768px) {
-    .header .search-container {
-        display: none;
+    .search-container .lupa-icon {
+        display: block; 
+    }
+    .search-container input[type="text"] {
+        display: none; 
+    }
+    .search-container:focus-within input[type="text"] {
+        display: block; 
     }
 
+
     .sidebar {
-        width: 60px;
-        display: none;
-        position: relative;
+        width: 150px; 
+        position: absolute;
+        top: 0;
+        left: -250px;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
         z-index: 10;
+        transition: left 0.3s ease; /* Transición suave */
     }
 
     .main-content {
-        margin-left: 0;
+        margin-left: 0; 
     }
 
     .task-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
 
     .stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
 
     .footer ul {
-        flex-direction: column;
+        flex-direction: column; 
     }
 
     .footer ul li {
         margin: 10px 0;
     }
 
-    
-
     #menu-toggle:checked + .menu-toggle + .sidebar {
-        left: 0;
+        left: 0; /* Movemos la barra lateral cuando se activa el checkbox */
     }
 
     .menu-toggle {
-        font-size: 1000px;
-        cursor: pointer;
+        font-size: 30px; 
+        cursor: pointer;  
         color: #333; 
-        transition: color 0.3s ease; 
+        display: block; 
     }
 
     .close-menu {
-        display: block;
-        cursor: pointer;
+        display: block; 
+        cursor: pointer; 
     }
 }
